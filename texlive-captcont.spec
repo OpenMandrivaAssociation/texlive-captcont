@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/captcont
+# catalog-date 2006-12-31 11:53:07 +0100
+# catalog-license lppl
+# catalog-version 2.0
 Name:		texlive-captcont
 Version:	2.0
 Release:	1
@@ -53,6 +59,7 @@ Captcont also fully supports the subfigure package.
 %doc %{_texmfdistdir}/source/latex/captcont/Makefile
 %doc %{_texmfdistdir}/source/latex/captcont/captcont.dtx
 %doc %{_texmfdistdir}/source/latex/captcont/captcont.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,3 +70,5 @@ Captcont also fully supports the subfigure package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
