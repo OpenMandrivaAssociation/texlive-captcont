@@ -6,7 +6,7 @@
 # catalog-version 2.0
 Name:		texlive-captcont
 Version:	2.0
-Release:	6
+Release:	7
 Summary:	Retain float number across several floats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/captcont
