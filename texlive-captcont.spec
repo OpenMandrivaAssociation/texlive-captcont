@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/captcont
-# catalog-date 2006-12-31 11:53:07 +0100
-# catalog-license lppl
-# catalog-version 2.0
 Name:		texlive-captcont
-Version:	2.0
-Release:	12
+Version:	15878
+Release:	1
 Summary:	Retain float number across several floats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/captcont
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/captcont.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/captcont.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/captcont.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/captcont.r15878.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/captcont.doc.r15878.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/captcont.source.r15878.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -31,12 +25,12 @@ and \caption* commands increment the figure or table counter.
 Captcont also fully supports the subfigure package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -52,25 +46,11 @@ Captcont also fully supports the subfigure package.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.0-2
-+ Revision: 749971
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.0-1
-+ Revision: 718003
-- texlive-captcont
-- texlive-captcont
-- texlive-captcont
-- texlive-captcont
-- texlive-captcont
-
