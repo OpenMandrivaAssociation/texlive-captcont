@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Retain float number across several floats
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/captcont
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/captcont
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/captcont.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/captcont.doc.r%{version}.tar.xz
